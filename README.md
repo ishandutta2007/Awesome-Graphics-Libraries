@@ -42,11 +42,14 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[WebGL / WebGPU (Browser APIs)](https://www.khronos.org/webgl/)**  
-
-  Browser-native graphics APIs, not SaaS products but included for ecosystem context. WebGL provides OpenGL ES 2.0/3.0 rendering in browsers; WebGPU is the modern successor with compute shader support. No installation required—the browser is the runtime.
+| Platform | Description | Pricing (Starting Tier) | Free Tier Limits | Valuation / Market Cap / Revenue |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Sketchfab](https://sketchfab.com)** | 3D asset hosting, WebGL/WebXR viewer platform, and 3D model marketplace (Subsidiary of Epic Games). | Pro plan at $15/month ($180 billed annually) | Free Basic plan: 100MB per upload file size cap, public model uploads, unbranded player not included | ~$22.5B Valuation (Parent: Epic Games) |
+| **[Unity Cloud](https://unity.com/products/cloud)** | Cloud graphics ecosystem and developer backend offering asset management, remote rendering, diagnostics, and automated build pipelines. | Pro plan at $210/seat/month ($2,310/seat/year) | Free Personal plan: Eligible for users/teams with <$200k/yr revenue or funding; includes 25 GB DevOps storage, 100 Mac build minutes/mo, 100 GB/mo egress | ~$19B Market Cap / ~$2.1B Annual Revenue |
+| **[Cesium ion](https://cesium.com/platform/cesium-ion/)** | 3D geospatial data platform for tiling, hosting, and streaming massive 3D terrain, photogrammetry, and CAD/BIM data to browsers via 3D Tiles (Subsidiary of Bentley Systems). | Commercial Individual plan at $149/month | Free Community plan: Personal/non-commercial use only, 10 GB cloud storage, 15 GB/month data streaming quota | ~$11B Market Cap (Parent: Bentley Systems) |
+| **[PlayCanvas](https://playcanvas.com)** | Cloud-hosted collaborative WebGL/WebGPU 3D HTML5 game engine and visual editor platform (Subsidiary of Snap Inc.). | Personal plan at $15/month | Free plan: Unlimited public projects, 1 GB asset storage, PlayCanvas-branded loading screen, free PlayCanvas URL hosting | ~$10.6B Market Cap (Parent: Snap Inc.) |
+| **[Spline](https://spline.design)** | Web-based collaborative 3D design and real-time graphics authoring tool with interactive WebGL export and React/web embedding. | Hobby plan at $12/month (billed annually) or $15/month (billed monthly) | Free plan: Limited personal files, unlimited viewers, public sharing with Spline watermark/logo, basic AI generation prompts | ~$75M Valuation / ~$5M ARR |
+| **[Vectary](https://www.vectary.com)** | Browser-based 3D modeling, Augmented Reality (AR) asset creator, and interactive WebGL scene embed platform. | Pro plan at $15/month (billed annually) or $19/month (billed monthly) | Free Starter plan: Up to 10 active projects, 1 workspace seat, 3,000 monthly AI credits, Vectary-branded embeds | ~$37M Valuation / ~$6M ARR |
 
 
 
