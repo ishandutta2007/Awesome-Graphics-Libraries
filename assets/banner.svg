@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1" />
+    </linearGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f293d" stroke-width="0.8" stroke-opacity="0.5" />
+    </pattern>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 900;
+        font-size: 50px;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        fill: #94a3b8;
+      }
+      .pill-text {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #38bdf8;
+      }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(3deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.25; transform: scale(1); }
+        50% { opacity: 0.55; transform: scale(1.08); }
+      }
+      @keyframes dashMove {
+        to { stroke-dashoffset: -100; }
+      }
+      .dynamic-cube {
+        animation: floatSlow 6s ease-in-out infinite;
+        transform-origin: 1040px 170px;
+      }
+      .dynamic-glow {
+        animation: pulseGlow 5s ease-in-out infinite alternate;
+        transform-origin: 1040px 170px;
+      }
+      .moving-flow {
+        stroke-dasharray: 8, 8;
+        animation: dashMove 4s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="340" fill="url(#bgGrad)" />
+  <rect width="1200" height="340" fill="url(#grid)" />
+
+  <!-- Ambient Dynamic Glows (Kept strictly behind and to sides) -->
+  <circle cx="1040" cy="170" r="160" fill="url(#glowGrad2)" filter="blur(40px)" class="dynamic-glow" />
+  <circle cx="100" cy="280" r="130" fill="url(#glowGrad2)" filter="blur(50px)" />
+
+  <!-- Right Decorative Animated 3D Isometric Elements (Safe Zone: x > 880) -->
+  <g class="dynamic-cube">
+    <!-- Connecting Stream Lines -->
+    <path d="M 860 170 Q 940 120 1040 120 T 1150 170" fill="none" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.4" class="moving-flow" />
+    <path d="M 880 230 Q 980 270 1060 210 T 1140 150" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-opacity="0.3" class="moving-flow" />
+
+    <!-- Isometric Graphic Nodes -->
+    <!-- Center 3D Hex/Cube Node -->
+    <g transform="translate(1040, 150)">
+      <!-- Top Face -->
+      <polygon points="0,-45 40,-22 0,0 -40,-22" fill="#38bdf8" fill-opacity="0.8" stroke="#7dd3fc" stroke-width="1.5" />
+      <!-- Left Face -->
+      <polygon points="-40,-22 0,0 0,45 -40,22" fill="#1e40af" fill-opacity="0.8" stroke="#3b82f6" stroke-width="1.5" />
+      <!-- Right Face -->
+      <polygon points="0,0 40,-22 40,22 0,45" fill="#4338ca" fill-opacity="0.8" stroke="#6366f1" stroke-width="1.5" />
+      <!-- Inner Core Glow Dot -->
+      <circle cx="0" cy="0" r="6" fill="#f8fafc" />
+    </g>
+
+    <!-- Satellite Node 1 (OpenGL/Vulkan Context) -->
+    <g transform="translate(930, 90)">
+      <polygon points="0,-22 20,-11 0,0 -20,-11" fill="#ec4899" fill-opacity="0.7" stroke="#f472b6" stroke-width="1" />
+      <polygon points="-20,-11 0,0 0,22 -20,11" fill="#9d174d" fill-opacity="0.7" stroke="#ec4899" stroke-width="1" />
+      <polygon points="0,0 20,-11 20,11 0,22" fill="#be185d" fill-opacity="0.7" stroke="#db2777" stroke-width="1" />
+    </g>
+
+    <!-- Satellite Node 2 (WebGPU / Shaders) -->
+    <g transform="translate(1120, 220)">
+      <polygon points="0,-25 24,-12 0,0 -24,-12" fill="#10b981" fill-opacity="0.7" stroke="#34d399" stroke-width="1" />
+      <polygon points="-24,-12 0,0 0,25 -24,12" fill="#047857" fill-opacity="0.7" stroke="#10b981" stroke-width="1" />
+      <polygon points="0,0 24,-12 24,12 0,25" fill="#065f46" fill-opacity="0.7" stroke="#059669" stroke-width="1" />
+    </g>
+
+    <!-- Coordinate Axes / Pipeline Indicator -->
+    <line x1="930" y1="90" x2="1040" y2="150" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4,4" stroke-opacity="0.6" />
+    <line x1="1040" y1="150" x2="1120" y2="220" stroke="#34d399" stroke-width="1.5" stroke-dasharray="4,4" stroke-opacity="0.6" />
+  </g>
+
+  <!-- Foreground Content Block (Guaranteed clean view, high-contrast) -->
+  <g transform="translate(80, 0)">
+    <!-- Pill Category Badge -->
+    <g transform="translate(0, 65)">
+      <rect width="320" height="28" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.7" />
+      <circle cx="16" cy="14" r="5" fill="#38bdf8" />
+      <text x="32" y="19" class="pill-text">GRAPHICS RUNTIMES &amp; ENGINES</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="150" class="title-text" fill="url(#glowGrad1)">Awesome Graphics Libraries</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="200" class="subtitle-text">Curated cross-platform window abstractions, OpenGL loaders, WebGPU APIs,</text>
+    <text x="0" y="230" class="subtitle-text">and rendering engines for games, digital twins, and simulation.</text>
+
+    <!-- Feature Tags -->
+    <g transform="translate(0, 265)">
+      <rect x="0" y="0" width="85" height="26" rx="6" fill="#1e293b" />
+      <text x="12" y="17" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#38bdf8">OpenGL</text>
+
+      <rect x="95" y="0" width="80" height="26" rx="6" fill="#1e293b" />
+      <text x="108" y="17" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#f43f5e">Vulkan</text>
+
+      <rect x="185" y="0" width="90" height="26" rx="6" fill="#1e293b" />
+      <text x="198" y="17" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#10b981">WebGPU</text>
+
+      <rect x="285" y="0" width="75" height="26" rx="6" fill="#1e293b" />
+      <text x="298" y="17" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#a855f7">DirectX</text>
+
+      <rect x="370" y="0" width="130" height="26" rx="6" fill="#1e293b" />
+      <text x="382" y="17" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#fbbf24">Cross-Platform</text>
+    </g>
+  </g>
+</svg>
